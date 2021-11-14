@@ -17,6 +17,8 @@
 		805EDFAA2735FDF0006F9A7E /* OmikujiAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805EDFA92735FDF0006F9A7E /* OmikujiAppTests.swift */; };
 		805EDFB42735FDF0006F9A7E /* OmikujiAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805EDFB32735FDF0006F9A7E /* OmikujiAppUITests.swift */; };
 		805EDFB62735FDF0006F9A7E /* OmikujiAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805EDFB52735FDF0006F9A7E /* OmikujiAppUITestsLaunchTests.swift */; };
+		805EDFC5273611FC006F9A7E /* drum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 805EDFC3273611FC006F9A7E /* drum.mp3 */; };
+		805EDFC6273611FC006F9A7E /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 805EDFC4273611FC006F9A7E /* bell.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		805EDFAF2735FDF0006F9A7E /* OmikujiAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmikujiAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		805EDFB32735FDF0006F9A7E /* OmikujiAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmikujiAppUITests.swift; sourceTree = "<group>"; };
 		805EDFB52735FDF0006F9A7E /* OmikujiAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmikujiAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		805EDFC3273611FC006F9A7E /* drum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drum.mp3; sourceTree = "<group>"; };
+		805EDFC4273611FC006F9A7E /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		805EDF832735FDEF006F9A7E = {
 			isa = PBXGroup;
 			children = (
+				805EDFC2273611FC006F9A7E /* omikuji_sound */,
 				805EDF8E2735FDEF006F9A7E /* OmikujiApp */,
 				805EDFA82735FDF0006F9A7E /* OmikujiAppTests */,
 				805EDFB22735FDF0006F9A7E /* OmikujiAppUITests */,
@@ -128,6 +133,15 @@
 				805EDFB52735FDF0006F9A7E /* OmikujiAppUITestsLaunchTests.swift */,
 			);
 			path = OmikujiAppUITests;
+			sourceTree = "<group>";
+		};
+		805EDFC2273611FC006F9A7E /* omikuji_sound */ = {
+			isa = PBXGroup;
+			children = (
+				805EDFC3273611FC006F9A7E /* drum.mp3 */,
+				805EDFC4273611FC006F9A7E /* bell.mp3 */,
+			);
+			path = omikuji_sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,7 +249,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				805EDF9F2735FDF0006F9A7E /* LaunchScreen.storyboard in Resources */,
+				805EDFC6273611FC006F9A7E /* bell.mp3 in Resources */,
 				805EDF9C2735FDF0006F9A7E /* Assets.xcassets in Resources */,
+				805EDFC5273611FC006F9A7E /* drum.mp3 in Resources */,
 				805EDF972735FDEF006F9A7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

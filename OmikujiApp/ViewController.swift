@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupSound()
     }
 
     @IBOutlet weak var stickView: UIView!
@@ -36,11 +38,11 @@ class ViewController: UIViewController {
         "大凶"
     ]
     
-    /*
+    var resultAudioPlayer: AVAudioPlayer = AVAudioPlayer()
+    
      override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
          //
      }
-     */
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         
@@ -58,6 +60,7 @@ class ViewController: UIViewController {
             (finished: Bool) in
             self.bigLabel.text = self.stickLabel.text
             self.overView.isHidden = false
+            self.resultAudioPlayer.play()
         })
         
     }
@@ -65,6 +68,13 @@ class ViewController: UIViewController {
     @IBAction func tapRetryButton(_ sender: Any) {
         overView.isHidden = true
         stickBottomMargin.constant = 0
+    }
+    
+    func setupSound() {
+        if let sound = Bundle.main.path(forResource: "drum", ofType: ".mp3") {
+            resultAudioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound))
+            resultAudioPlayer.prepareToPlay()
+        }
     }
 }
 
